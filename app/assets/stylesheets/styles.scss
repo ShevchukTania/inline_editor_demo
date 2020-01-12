@@ -32,7 +32,6 @@ a, a:hover {
 
 .container {
   padding: 10px 30px;
-  width: 100%;
 }
 
 .container table {
@@ -79,7 +78,7 @@ form label {
 
 .clickable-item:after {
   content: '';
-  background: url('icon-edit.svg') no-repeat 97% center;
+  background: image-url('icon-edit.svg') no-repeat 97% center;
   display: block;
   position: absolute;
   width: 100%;
@@ -114,6 +113,6 @@ form label {
   -o-appearance:          none;
   appearance:             none;
   box-shadow: none;
-  background: url('dropdown-arrow.svg') right no-repeat;
+  background: image-url('dropdown-arrow.svg') right no-repeat;
   background-position: calc(100% - 5px) 50%;
 }
