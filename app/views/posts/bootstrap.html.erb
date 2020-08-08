@@ -1,3 +1,7 @@
+<%= content_for :styles do %>
+  <%= stylesheet_link_tag 'bootstrap_styles', media: 'all' %>
+<% end %>
+
 <h1> Posts </h1>
 
 <p> <%= link_to 'Add new post', new_post_path %> </p>
@@ -24,16 +28,14 @@
           <td class='id'>
             <%= post.id %>
           </td>
-          <td class='post-title'>
+          <td>
             <%= inline_editor as: :select, text: post.title, value: post.title, collection: Post::TITLE,
-              save_url: inline_update_post_path(post, format: :json), include_blank: false, param: 'title'%>
+              save_url: inline_update_post_path(post), include_blank: false, param: 'title' %>
           </td>
 
-          <td class="post-about <%=dom_id(post)%>">
-            <%= inline_editor as: :grouped_select, text: post.about, value: post.about, collection: Post::ABOUT_GROUPED,
-              save_url: inline_update_post_path(post, format: :json), include_blank: false, param: 'about' do %>
-              <%= inline_editor_text(value: post.about, option: 'about') %>
-            <% end %>
+          <td>
+            <%= inline_editor as: :select, text: post.about, value: post.about, collection: Post::ABOUT,
+              save_url: inline_update_post_path(post), include_blank: false, param: 'about' %>
           </td>
           <td class='edit'>
             <%= link_to 'edit', edit_post_path(post) %>

@@ -9,7 +9,8 @@ gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'inline_editor', git: 'https://github.com/ShevchukTania/inline_editor'
+gem 'inline_editor', '>= 0.2.0'
+gem 'bootstrap'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -1,0 +1,93 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+body header {
+  width: 100%;
+  display: flex;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ccc;
+  align-items: baseline;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: 600;
+  flex: 1 1 30%;
+}
+
+header nav {
+  flex: 1 1 70%;
+}
+
+header nav a + a {
+  padding-left: 20px;
+}
+
+body a, body a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.container {
+  padding: 10px 30px;
+  max-width: 100%;
+}
+
+.container table {
+  border: 1px solid #dedede;
+  padding: 5px 20px;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #dedede;
+  padding: 5px 20px;
+  height: 20px;
+  text-align: left;
+  width: 170px;
+}
+
+table td.post-about {
+  width: 250px;
+}
+
+table .edit, table .id {
+  width: auto;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+form label {
+  padding-right: 10px;
+}
+
+.flash-container div {
+  position: absolute;
+  max-width: 500px;
+  right: 10px;
+  top: 70px;
+  padding: 10px;
+  background: #ccc;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.flash-container .success {
+  background: #1b8847;
+}
+
+.flash-container .alert {
+  background: #f3df06;
+  color: #000;
+}
